@@ -5,10 +5,10 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-  <!-- <param-name>contextConfigLocation</param-name> 为固定写法. 拼写错误 报找不到配置的错误-->
+  <!-- <param-name>contextConfigLocation</param-name>为固定写法. -->
   <!--<param-value></param-value>中可以通过 classpath 或 /WEB-INF 两种路径来加载xml文件.-->
   <context-param>
-    <param-name>contextConfigLocation</param-name>
+    <param-name>contextConfigLoaction</param-name>
     <param-value>
       classpath:applicationContext.xml
     </param-value>
