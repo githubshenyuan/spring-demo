@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring-base-demo/spring-base-demo.iml" filepath="$PROJECT_DIR$/spring-base-demo/spring-base-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-demo.iml" filepath="$PROJECT_DIR$/spring-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-hibernate-demo/spring-hibernate-demo.iml" filepath="$PROJECT_DIR$/spring-hibernate-demo/spring-hibernate-demo.iml" />
     </modules>
   </component>
 </project>
