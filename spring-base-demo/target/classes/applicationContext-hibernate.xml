@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 以下示例配置了多种数据源 和 sessionFactory
+        数据源
+            1、spring 自带数据源  name="dataSource"
+            2、c3p0 配置数据源  name="dataSource1"
+            3、hibernate 整合 c3p0 配置 数据源
+        sessionFactory
+            1、
+            2、
+            3、
+    -->
+
+
+    <!-- 设置数据源-->
+    <bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://192.168.137.103:3306/hiber" />
+        <property name="username" value="root" />
+        <property name="password" value="123456" />
+    </bean>
+
+    <!-- 直接配置配置 c3p0 连接池-->
+    <!-- destroy-method: 设置spring 关闭容器是 关闭数据源 （）-->
+    <!--<bean name="dataSource1" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">-->
+        <!--&lt;!&ndash;<property name="driverClass" value="oracle.jdbc.driver.OracleDriver"></property>&ndash;&gt;-->
+        <!--<property name="driverClass" value="com.mysql.jdbc.Driver" />-->
+        <!--&lt;!&ndash;<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:ORCL"></property>&ndash;&gt;-->
+        <!--<property name="jdbcUrl" value="jdbc:mysql://192.168.137.103:3306/hiber" />-->
+        <!--<property name="user" value="root" />-->
+        <!--<property name="password" value="123456" />-->
+        <!--<property name="minPoolSize" value="10" />-->
+        <!--<property name="maxPoolSize" value="100" />-->
+        <!--<property name="maxIdleTime" value="1800" />-->
+        <!--<property name="acquireIncrement" value="3" />-->
+        <!--<property name="maxStatements" value="1000" />-->
+        <!--<property name="initialPoolSize" value="10" />-->
+        <!--<property name="idleConnectionTestPeriod" value="60" />-->
+        <!--<property name="acquireRetryAttempts" value="30" />-->
+        <!--<property name="breakAfterAcquireFailure" value="true" />-->
+    <!--</bean>-->
+
+
+    <!---->
+    <!-- spring 整合hibernate 使用注解的方式-->
+    <bean name="sessionFactory"
+          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <!-- 数据源-->
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
