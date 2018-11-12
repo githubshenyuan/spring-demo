@@ -12,6 +12,7 @@
         <module>spring-base-demo</module>
         <module>spring-hibernate-demo</module>
         <module>spring-hibernate-single-demo</module>
+        <module>spring-junit-demo</module>
     </modules>
 
 
