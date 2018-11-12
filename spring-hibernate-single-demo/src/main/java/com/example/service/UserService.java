@@ -4,6 +4,7 @@ import com.example.entity.User;
 import com.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -16,8 +17,11 @@ public class UserService {
     @Resource
     UserRepository userRepository;
 
-    public void save(User user) {
+    @Transactional
+    public void save(User user) throws Exception {
         userRepository.save(user);
+
+        int a = 1 / 0;
 
     }
 }

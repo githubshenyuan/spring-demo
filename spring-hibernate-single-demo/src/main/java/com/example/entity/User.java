@@ -1,5 +1,6 @@
 package com.example.entity;
 
+
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -8,7 +9,7 @@ import javax.persistence.*;
  * @author sh 2018/11/12 9:18
  * @version ideaIU-2018.2.5.win
  */
-@Entity()
+@Entity
 @Table(name = "user")
 public class User {
 

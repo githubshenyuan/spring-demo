@@ -20,7 +20,12 @@ public class UserControllerTest {
     UserController userController;
     @Test
     public void save() {
-        userController.save();
+        try {
+            userController.save();
+        } catch (Exception e) {
+            System.out.println("异常抛出");
+        }
+
 
     }
 }

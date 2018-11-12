@@ -17,7 +17,7 @@ public class UserController {
     @Resource
     UserService userService;
 
-    public void save() {
+    public void save() throws Exception {
         User user = new User();
         user.setUserName("xiaoming");
         user.setPassword("password");
