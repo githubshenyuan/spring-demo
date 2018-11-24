@@ -13,6 +13,7 @@
         <module>spring-hibernate-demo</module>
         <module>spring-hibernate-single-demo</module>
         <module>spring-junit-demo</module>
+        <module>spring-spring-demo</module>
     </modules>
 
 
