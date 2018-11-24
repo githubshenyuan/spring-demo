@@ -14,6 +14,7 @@
         <module>spring-hibernate-single-demo</module>
         <module>spring-junit-demo</module>
         <module>spring-spring-demo</module>
+        <module>spring-origin-demo</module>
     </modules>
 
 
